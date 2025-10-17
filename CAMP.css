@@ -1,0 +1,630 @@
+html {
+  font-size: 100.01%;
+  background-color:white;
+}
+/* reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+hr,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfont,
+thead,
+tr,
+th,
+td {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-size: 100%;
+}
+dfn,
+i,
+cite,
+var,
+address,
+em {
+  font-style: normal;
+}
+th,
+b,
+strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+textarea,
+input,
+select {
+  font-family: inherit;
+  font-size: 1em;
+}
+blockquote,
+q {
+  quotes: none;
+}
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+  content: none;
+}
+ol,
+ul {
+  list-style: none;
+}
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption,
+th,
+td {
+  text-align: left;
+}
+:focus {
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font: 0.8125em/1.5 Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+header,
+nav,
+section,
+article,
+aside,
+footer {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hamburger { display: block; }
+  .dropmenu { display: none; }
+  header { flex-wrap: wrap; padding: 10px; }
+  .logo-image img { height: 40px; }
+  .Logo h1 { font-size: 1.2em; }
+  .search-box { order: 3; width: 100%; margin-top: 10px; }
+  .search-box input[type="text"] { width: 70%; }
+}
+
+/*---------------------Start Here---------------*/
+
+.Top-page{
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%2Fid%2FOIP.AEdc7iFu-dsESaxdQc4yiwHaE8%3Fcb%3D12%26pid%3DApi&f=1&ipt=136f7cb6179c16952814c3c3589da5cade86031bbb3471c7b6454edd42adbbb9&ipo=images");
+ background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header
+{
+  padding-top: 5px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+header img{
+  width: 150px;
+  height: auto;
+  margin: 2px  100px;
+}
+
+header img:hover{
+  display: pointer;
+  transform: scale(1.1);/*zoom in 10% on hover*/
+}
+
+.text, .dropbtn{
+  display:flex;
+  padding-top: 45px;
+  gap: 10px;
+  font-size:10px;
+  float:right;
+  margin-left: 10px;
+  cursor: pointer;
+  color: white;
+  text-shadow: 1px 0 rgba(15, 15, 15, 0.658);
+}
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropbtn {
+      background-color: transparent;
+      padding: 0px 0px;
+      font-size: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .dropbtn:after {
+      content: "\25BC";  /* Unicode downward triangle */
+      font-size: 12px;
+      margin-left: 8px;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      margin-top:25px;
+      margin-left:10px;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+      border-bottom: 1px solid #eee;
+    }
+    .dropdown-content a:last-child {
+      border-bottom: none;
+    }
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+    .dropdown.show .dropdown-content {
+      display: block;
+    }
+
+/*Division 1*/
+.div1{
+  padding-top:120px;
+  padding-left: 100px;
+  padding-bottom: 300px;
+}
+
+.div1 b{
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.div1 p{
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 50px;
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.text span, .div1 span{
+  font-size: 10px;
+  padding: 12px 12px;
+  background-color: #000000;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/*Division 2*/
+.div2{
+  gap: 20px;
+  align-items: center;
+  width:  100%;
+  height: auto;
+  text-align:center;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  background-color:white;
+}
+
+.div2 span{
+  font-size: 25px;
+  font-weight: bold;
+} 
+
+.toprow figure{
+  display: flex;
+  gap: 10px;
+  padding-left: 100px;
+  padding-top: 50px;
+}
+
+
+.div2 img{
+  width:  50px;
+  height:auto;
+  
+}
+
+.div2 b{
+  font-weight: bold;
+  font-style:italic;
+}
+
+  figure {
+    padding: 5px;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+  }
+
+  .toprow, .bottomrow {
+    margin: 0 20px;
+  }
+
+    .toprow ul{
+      justify-content: space-between; /* or use space-evenly */
+      align-items: center;
+      margin-right: 10px;
+  }
+
+  .toprow li {
+    color: #000000;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+
+.toprow li, .bottomrow li{
+margin: 2px;
+}  
+
+  .bottomrow h1{
+    color: #044880;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size:30px;
+  }
+
+  .bottomrow ul{
+      justify-content: space-between; /* or use space-evenly */
+      align-items: center;
+      margin-right: 100px;
+  }
+
+  /*Division 3*/
+  .div3{
+  align-items: center;
+  width:  100%;
+  height: auto;
+  text-align:center;
+  padding-top: 80px;
+  padding-bottom: 140px;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.0-iVpwSpt_2eYcsDilVm3AHaEh%3Fcb%3D12%26pid%3DApi&f=1&ipt=3a4a6d70dfaa86a776ccfe0340dc9178184cbbadf62c44672dd366fc3c8d8556&ipo=images");
+ background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
+.div3 h1{
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.div3 bold{
+  font-weight: bold;
+  font-size: 11px;    
+}
+
+.div3 p{
+  font-size: 10px;
+}
+
+/*Division 4*/
+.div4{
+  align-items: center;
+  width:  50%;
+  height: auto;
+  text-align:center;
+  margin: -100px 25% 40px 25%;
+  float:center;
+  background-color:white;
+}
+
+.div4 h3, .div5 h3, .div6 h3, .div7 h3, .div8 h3{
+font-size: 25px;
+font-weight:bold;
+padding-top:15px;
+padding-bottom:5px;
+}
+
+.div4 h4, .div6 h4{
+font-size: 15px;
+font-weight:bold;
+padding-top:10px;
+}
+
+.div4 p{
+  padding: 0px 10px 0px 10px;
+}
+
+/*Division 5*/
+.div5{
+      width: 80%;
+      margin: 40px auto;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+}
+
+#imagejust{
+      display: flex;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; /* Firefox */
+      padding-top: 40px;
+}
+
+    #imagejust::-webkit-scrollbar {
+      display: none; /* Chrome, Safari */
+    }
+
+#imagejust img{
+      max-width: 150px;
+      height: auto;
+      margin: 10px;
+      user-select: none;
+}
+
+        /* Buttons */
+    .scroll-button {
+      position: absolute;
+      top: 60%;
+      transform: translateY(-50%);
+      border: none;
+      color: rgb(0, 0, 0);
+      font-size: 24px;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 50%;
+      user-select: none;
+    }
+    .scroll-left {
+      left: 0;
+    }
+    .scroll-right {
+      right: 0;
+    }
+
+  /*Division 6*/
+.div6{
+  text-align: center;
+  float: center;
+  padding-bottom:50px;
+            background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.Ybh_2dnRkuBKHny-sDcAngHaFS%3Fcb%3D12%26pid%3DApi&f=1&ipt=bb64048a376d3d2bd30b4aefc7ae2178d725673950a2389f21208ac4a3ff319f&ipo=images");
+ background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color:white;
+}
+
+/*Divide 7*/
+.div7{
+  text-align: left;
+  float: center;
+  margin: 0px 10% 50px 10%;
+  align-items: center;
+}
+
+.div7 h3{
+  text-align: center;
+}
+
+#flex{
+  display: flex;    
+}
+
+#flex b{
+  font-weight: bold;
+}
+
+#flex span{
+ border-spacing: 100px;
+ width:30%;
+  margin-right: 3.4%;
+}
+
+#flex span:last-child{
+  margin-right: 0%;
+}
+
+#flex span:first-child{
+  margin-left: 0%;
+}
+
+/*Divide 8*/
+.div8{
+  background-color: black;
+  color: white;
+  padding-bottom:50px;
+            background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.lyqvC8oD4GSlfnO7XifWkQHaC7%3Fcb%3D12%26pid%3DApi&f=1&ipt=d93f9fb472d8b7b4a1b7687cda7dadf8d90248bfa8ee632167a6f0e3249e6608&ipo=images");
+ background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.div8 h3{
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.div8 a{
+  text-align: center;
+  text-decoration: none;
+  color:white;
+  background-color:black;
+  font-size: 10px;
+  cursor: pointer;
+  padding: 10px 20px 10px 20px;
+  margin-left:5px;
+  border-radius: 2px;
+}
+
+#position{
+  text-align: center;
+}
+
+/*Aside section*/
+aside{
+  color: white;
+  padding: 50px 0px 0px 0px;
+  margin: 10px 10% 10px 10%;
+  background-color:black;
+
+}
+
+aside span a{
+  text-decoration: none;
+  color:white;
+  font-weight: normal;
+  margin-bottom:30px;
+  padding-top: 40px;
+}
+
+aside span{
+  padding-bottom: 10px;
+}
+
+aside span p{
+  margin-bottom: 20px;
+}
+
+#flex li{
+  padding-bottom: 15px;
+}
+
+.black{
+  background-color:black;
+}
+
+/*Footer Section*/
+footer{
+  border-color: white;
+  border-style: bold;
+   display:block;
+     color: white;
+  background-color: black;
+  padding: 10px 0px 10px 0;
+  margin: 10px 10% 10px 10%;
+}
+
+#bline{
+  border-top: 2px solid white;
+  display: flex;
+}
+
+#left img{
+  width:150px;
+  height:auto;
+  border-color: white;
+  border-style: bold;
+  padding-top:20px;
+}
+
+#left bold{
+font-size: 15px;
+margin-top: 20px;
+}
+
+#left p{
+padding-top: 10px;
+font-size: 10px;
+}
+
+#right{
+  border-style: bold;
+  border-color: white;
+  border-style: bold;
+  margin-left: 450px;
+}
+
+#right img:hover{
+  cursor:pointer;
+  background-color: blue;
+}
+
+#right img{
+    padding-top:20px;
+  width:40px;
+  height: 40px;
+}
+
+
+

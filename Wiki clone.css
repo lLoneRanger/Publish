@@ -1,0 +1,402 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #f8f9fa;
+  padding: 10px 20px;
+  margin: 0px 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex; /* Flexbox for layout and make display horizontal */
+  justify-content: space-between;
+  align-items: center; /* Vertically center items*/
+  position: relative; /* For positioning mobile menu */
+}
+
+.hamburger {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.hamburger input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #000;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.hamburger span:nth-child(2) { top: 6px; }
+.hamburger span:nth-child(3) { top: 13px; }
+.hamburger span:nth-child(4) { top: 20px; }
+
+.hamburger input:checked ~ span:nth-child(2) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2);
+}
+
+.hamburger input:checked ~ span:nth-child(3) {
+  transform: rotate(45deg) translate(0, 0);
+  top: 13px;
+}
+
+.hamburger input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(0, 0);
+  top: 13px;
+}
+
+.hamburger input:checked ~ .menu {
+  display: block;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  min-width: 150px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 9999;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #0073e6;
+  border-bottom: 1px solid #eee;
+}
+
+.menu a:last-child { border-bottom: none; }
+.menu a:hover { background: #f0f0f0; }
+
+.dropmenu {
+  display: flex;
+  align-items: center;
+}
+
+.dropmenu a {
+  text-decoration: none;
+  color: #0073e6;
+  padding: 10px 15px;
+  margin: 0 5px;
+}
+
+.dropmenu a:hover {
+  background: #f0f0f0;
+  text-decoration: underline;
+}
+
+/* Logo styles */
+.Logo {
+  cursor: pointer; /* Pointer cursor for better UX*/
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  align-items: center;
+  border: #ffffff;
+}
+
+.logo-image img {
+  height: 60px; /* Adjust the height as needed */
+  vertical-align: middle; /* Align the image vertically with the text */
+  margin-right: 5px; /* Space between image and text */
+}
+
+.Logo h1 {
+  margin: 0px 0px;
+    padding: 0px 6px;
+}
+
+.Logo h6 {
+  margin: 0;
+  padding: 0px 0px;
+  color: #555;
+}
+
+/* Search box styles */
+.search-box {
+        position: relative;
+        display: inline-block;
+      }
+
+.search-box input[type="text"] {
+  padding: 5px 10px;
+  font-size: 14px;
+  padding-left: 30px; /* Add space for the icon */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: url('https://cdn-icons-png.flaticon.com/512/622/622669.png') no-repeat 0.1px center;
+  background-size: 20px 20px;
+}
+
+.search-box .fa-search {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%); /*Center the icon vertically*/
+  color: #888;
+}
+
+/* User options styles */
+.user-option ul {
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  /*border-bottom: 1px solid #ddd;*/
+}
+
+.user-option ul li {
+  margin: 1px 5px;
+  border-color: #0073e6;
+}
+
+.user-option li a {
+  text-decoration: none;
+  color: #0073e6;
+}
+
+.user-option li a:hover {
+  text-decoration: underline;
+}
+
+
+/* Navigation */
+nav {
+  background-color: #f8f9fa;
+  margin: 20px 10px;
+  display: flex;
+  top: 10px; /* Adjust based on header height */
+  border: 1px solid #f00505;
+  padding: 20px;
+  justify-content: space-between; /* Space between image and text */
+  /*box-shadow: 0 2px 5px rgba(0,0,0,0.1);*/
+ /* z-index: 1000;  Ensure it appears above other content */
+}
+
+nav div.image {
+  width: 20%;
+  position: left;
+}
+
+nav img{
+  height: 20px;
+  width: 20px;
+  cursor: pointer; /* Pointer cursor for better UX*/
+}
+
+nav div.text {
+  width: 80%;
+  position: right;
+  text-decoration:underline;
+  color:#555555;
+}
+
+nav div.text p, nav div.text a{
+  margin: 0;
+  font-weight:bold;/* Make the link text bold */
+  color:#000000;/* Black color for better visibility */
+}
+
+nav div.close {
+  float: right;
+  cursor: pointer; /* Pointer cursor for better UX*/
+  font-size: 16px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #ccc;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hamburger { display: block; }
+  .dropmenu { display: none; }
+  header { flex-wrap: wrap; padding: 10px; }
+  .logo-image img { height: 40px; }
+  .Logo h1 { font-size: 1.2em; }
+  .search-box { order: 3; width: 100%; margin-top: 10px; }
+  .search-box input[type="text"] { width: 70%; }
+}
+
+/* Style for Main*/
+main {
+  margin: 0px 10px;
+  background: #ffffff;
+  width: 90%;
+  float: left;
+}
+
+main nav{
+  margin: 10px 0px;
+  padding: 0px 0px;
+  border-style: none;
+  width: 80.5%;
+  color: #000000;
+  border-bottom: 2px solid #ddd;
+  word-spacing: 5px;
+}
+
+#left{
+  width: 10%;
+  float: left;
+  flex: 1;  /*Make sections take up equal space */
+  position: left fixed;
+  height: 100%;
+  text-decoration: none !important;
+  font-style: normal;
+  font-weight: normal;
+    color: #000000;
+}
+
+#right{
+  width: 10%;
+  float: right !important;
+  flex: 1;  /*Make sections take up equal space */
+  height: 100%;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+    color: #000000;
+}
+
+#center{
+  width: 80.5%;
+text-align: center !important;
+  flex: 1;  /*Make sections take up equal space */
+  height: 100%;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+    color: #000000;
+    display: inline-block;
+    border: 1px solid #ddd;
+}
+
+#up{
+  display: flex;
+  margin: 0px 0px;
+  padding: 0px 0px;
+}
+
+#left a, #right a, #center a {
+  text-decoration: none;
+  color: #000000;
+}
+
+section{
+  padding: 10px;
+  margin-left: 0px;
+  margin-bottom: 5px;
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  text-align: left;
+  box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+.green {
+  width: 45%;
+  float:left;
+  /*flex: 1;  Make sections take up equal space */
+  margin-right: 5px;
+  background-color: #e2fcf1;
+}
+
+.green header {
+  font-size: 1.5em;
+  margin-bottom: 4px;
+  margin-left: 0px;
+  background-color:#a0fdd6;
+  padding: 2px 4px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.blue{
+  width: 35%;
+  float:inline-end;
+  /*flex: 1;  Make sections take up equal space */
+  margin-right: 5px;
+  background-color: #e7ecfc;
+}
+
+.blue header {
+  font-size: 1.5em;
+  margin-bottom: 4px;
+  background-color:#7091fd;
+    margin-left: 0px;
+  padding-bottom: 5px;
+  padding: 2px 4px;
+  text-align: left;
+}
+
+#mid{
+  display: flex;
+}
+
+.purple {
+  float:inline-end; /* Take up remaining space */
+  /*flex: 1;  Make sections take up equal space */
+  margin-right: 5px;
+  background-color: #f2e7fc;
+  width: 80.5%;
+}
+
+.purple img{
+  height: 20px;
+  width: 20px;
+  cursor: pointer; /* Pointer cursor for better UX*/
+float: right;
+}
+
+.purple header {
+  font-size: 1.5em;
+  margin-bottom: 4px;
+  background-color:#c487fd;
+    margin-left: 0px;
+  padding-bottom: 5px;
+  padding: 2px 4px;
+  text-align: left;
+}
+
+article{
+  margin-bottom: 10px;
+}
+
+aside{
+  width: 10%;
+  float:right;
+  flex: 1;  /*Make sections take up equal space */
+  position: right fixed;
+  height: 100%;
+}
+
+footer {
+  background: #f8f9fa;
+  text-align: center;
+  padding: 10px;
+  margin: 20px 10px;
+  border-top: 1px solid #ddd;
+  float:inline-end;
+  font-size: 10px;
+}

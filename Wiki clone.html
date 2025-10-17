@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Wiki clone.css" />
+    <title>Wiki Clone</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="hamburger">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="menu">
+          <a href="#">Main Page</a>
+          <a href="#">Contents</a>
+          <a href="#">Future Events</a>
+        </div>
+      </div>
+
+      <div class="dropmenu">
+        <a href="#">Main Page</a>
+        <a href="#">Contents</a>
+        <a href="#">Future Events</a>
+      </div>
+
+      <div class="logo-image" onclick="goHome()">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia-logo-v2-en.svg/1200px-Wikipedia-logo-v2-en.svg.png"
+          alt="Wikipedia Logo"
+        />
+      </div>
+
+      <div class="Logo" onclick="goHome()">
+        <h1>Wikipedia</h1>
+        <h6>The free Encyclopedia</h6>
+      </div>
+
+      <form class="search-box">
+        <i class="fas fa-search"></i
+        ><!--Search icon-->
+        <input type="text" placeholder="Search Wikipedia..." />
+        <!-- <select class="dropdown">
+          <option value="all">All</option>
+          <option value="articles">Articles</option>
+          <option value="images">Images</option>
+          <option value="videos">Videos</option>
+        </select>-->
+        <button type="submit">Search</button>
+      </form>
+
+      <div class="user-option">
+        <ul>
+          <li><a href="#">Donate</a></li>
+          <li><a href="#">Create Account</a></li>
+          <li><a href="#">Log In</a></li>
+          <li><a href="#">...</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <nav>
+      <div class="image">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Wiki_Loves_Monuments_logo.svg/1200px-Wiki_Loves_Monuments_logo.svg.png"
+          alt="Wiki Loves Monuments Logo"
+          width="50"
+          height="50"
+        />
+      </div>
+      <div class="text">
+        Wiki Loves Monuments 2024: Photograph a monument, help WIkipedia win!
+        <p><a href="www.jjj.com">Learn more</a></p>
+      </div>
+      <div class="close" onclick="closeBanner()">X</div>
+    </nav>
+
+    <main>
+      <nav>
+        <div id="left">
+          <a href="#">Main Page</a>
+          <a href="#">Talk</a>
+        </div>
+        <div id="right">
+          <a href="#">Read</a>
+          <a href="#">View Source</a>
+          <a href="#">View History</a>
+          <a href="#">Tools</a>
+          <a href="#">...</a>
+        </div>
+      </nav>
+
+      <nav id="center">
+        <h1>Welcome to <a href="#">Wikipedia</a>,</h1>
+        <p>
+          the <a href="#">free encyclopedia </a> that
+          <a href="#">anyone can edit</a>.
+        </p>
+        <a href="#">113,556 </a>active editors.
+        <a href="#">6,580,000</a> articles in <a href="#">English</a>.
+      </nav>
+
+      <div id="up">
+        <section class="green">
+          <header>From today's featured article</header>
+          <article>
+            Otto Hahn (1879–1968) was a German chemist who was a pioneer in the
+            field of radiochemistry. He is referred to as the father of nuclear
+            chemistry. Working with Lise Meitner at the Kaiser Wilhelm Institute
+            for Chemistry in the building that now bears their names, they
+            discovered isotopes of the radioactive elements radium, thorium,
+            protactinium and uranium. He also discovered the phenomena of atomic
+            recoil and nuclear isomerism, and pioneered rubidium–strontium
+            dating. In 1938, Hahn, Meitner, Otto Robert Frisch and Fritz
+            Strassmann discovered nuclear fission, for which Hahn alone was
+            awarded the 1944 Nobel Prize in Chemistry. He worked on the German
+            nuclear program during World War II and at the end of the war he was
+            arrested by the Allied forces and detained in Farm Hall. After the
+            war, he became the founding president of the Max Planck Society and
+            one of the most influential and respected citizens of post-war West
+            Germany. (Full article...)
+            <a href="www.jjj.com">Customer support</a>
+          </article>
+
+          <header>Did you know ...</header>
+          <article>
+            Otto Hahn (1879–1968) was a German chemist who was a pioneer in the
+            field of radiochemistry. He is referred to as the father of nuclear
+            chemistry. Working with Lise Meitner at the Kaiser Wilhelm Institute
+            for Chemistry in the building that now bears their names, they
+            discovered isotopes of the radioactive elements radium, thorium,
+            protactinium and uranium. He also discovered the phenomena of atomic
+            recoil and nuclear isomerism, and pioneered rubidium–strontium
+            dating. In 1938, Hahn, Meitner, Otto Robert Frisch and Fritz
+            Strassmann discovered nuclear fission, for which Hahn alone was
+            awarded the 1944 Nobel Prize in Chemistry. He worked on the German
+            nuclear program during World War II and at the end of the war he was
+            arrested by the Allied forces and detained in Farm Hall. After the
+            war, he became the founding president of the Max Planck Society and
+            one of the most influential and respected citizens of post-war West
+            Germany. (Full article...)
+            <a href="www.jjj.com">Customer support</a>
+          </article>
+        </section>
+
+        <section class="blue">
+          <header>In the news</header>
+          <article>
+            Guillaume V (pictured) succeeds his father Henri as Grand Duke of
+            Luxembourg after the latter's abdication. Sarah Mullally is
+            announced as the next archbishop of Canterbury, which will make her
+            the first female leader of the Anglican Communion. English zoologist
+            and primatologist Jane Goodall dies at the age of 91. A
+            magnitude-6.9 earthquake in Cebu, Philippines, leaves at least 70
+            people dead.
+          </article>
+
+          <header>On this day</header>
+          <article>
+            Guillaume V (pictured) succeeds his father Henri as Grand Duke of
+            Luxembourg after the latter's abdication. Sarah Mullally is
+            announced as the next archbishop of Canterbury, which will make her
+            the first female leader of the Anglican Communion. English zoologist
+            and primatologist Jane Goodall dies at the age of 91. A
+            magnitude-6.9 earthquake in Cebu, Philippines, leaves at least 70
+            people dead.
+          </article>
+        </section>
+
+        <aside>
+          <ul>
+            <li>Appearance hide</li>
+            <li>Text</li>
+            <li>Small</li>
+            <li>Standard</li>
+            <li>Large</li>
+            <li>Width</li>
+            <li>Standard</li>
+            <li>Wide</li>
+            <li>Color (beta)</li>
+            <li>Automatic</li>
+            <li>Light</li>
+            <li>Dark</li>
+          </ul>
+        </aside>
+      </div>
+
+      <div id="mid">
+        <section class="purple">
+          <header>Today's featured picture</header>
+          <article>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Flag_of_the_United_States_%281955%E2%80%931969%29.svg"
+              alt="Flag of the United States (1959–1960)"
+              width="200"
+              height="120"
+            />
+            The flag of the United States from 1959 to 1960, with 49 stars,
+            representing the 49 states of the union at the time. Following the
+            admission of Alaska as the 49th state on January 3, 1959, a new star
+            was added to the flag on July 4, 1959. The flag was in use until
+            July 4, 1960, when Hawaii was admitted as the 50th state and a new
+            flag design with 50 stars was adopted. (Full article...)
+          </article>
+        </section>
+      </div>
+    </main>
+  </body>
+
+  <footer>
+    <article>
+      Text is available under the Creative Commons Attribution-ShareAlike 4.0
+      License; additional terms may apply. By using this site, you agree to the
+      Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of
+      the Wikimedia Foundation, Inc., a non-profit organization.
+    </article>
+  </footer>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Horizontal Scroll with Buttons</title>
+  <style>
+    .container {
+      width: 80%;
+      margin: 40px auto;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #ccc;
+    }
+    #imagejust {
+      display: flex;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; /* Firefox */
+    }
+    #imagejust::-webkit-scrollbar {
+      display: none; /* Chrome, Safari */
+    }
+    #imagejust img {
+      max-width: 150px;
+      margin: 10px;
+      user-select: none;
+    }
+    /* Buttons */
+    .scroll-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0,0,0,0.5);
+      border: none;
+      color: white;
+      font-size: 24px;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 50%;
+      user-select: none;
+    }
+    .scroll-left {
+      left: 0;
+    }
+    .scroll-right {
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h3>Recommended by every major OEM</h3>
+  <button class="scroll-button scroll-left" onclick="scrollLeft()">&#8249;</button>
+  <div id="imagejust">
+              <img src="https://www.campsystems.com/hs-fs/hubfs/01%20CAMP%20Website%20Graphics/OEM%20Logos_Sized/CAMP%20Gulfstream.png?width=450&height=301&name=CAMP%20Gulfstream.png"/>
+            <img src="https://www.campsystems.com/hs-fs/hubfs/01%20CAMP%20Website%20Graphics/OEM%20Logos_Sized/CAMP%20BOMBARDIER%202024.png?width=451&height=300&name=CAMP%20BOMBARDIER%202024.png"/>
+            <img src="https://www.campsystems.com/hs-fs/hubfs/01%20CAMP%20Website%20Graphics/OEM%20Logos_Sized/CAMP%20Dassault.png?width=451&height=300&name=CAMP%20Dassault.png"/>
+            <img src="https://www.campsystems.com/hs-fs/hubfs/01%20CAMP%20Website%20Graphics/OEM%20Logos_Sized/CAMP%20HondaJet.png?width=451&height=301&name=CAMP%20HondaJet.png"/>
+            <img src="https://www.campsystems.com/hs-fs/hubfs/01%20CAMP%20Website%20Graphics/OEM%20Logos_Sized/CAMP%20Leonardo.png?width=450&height=301&name=CAMP%20Leonardo.png"/>
+            <img src="https://www.campsystems.com/hs-fs/hubfs/01%20CAMP%20Website%20Graphics/OEM%20Logos_Sized/CAMP%20PWC.png?width=450&height=301&name=CAMP%20PWC.png"/>
+            <img src="https://www.campsystems.com/hs-fs/hubfs/TA_logo_CMYK_master-beechcraft-primary-black.png?width=1200&height=627&name=TA_logo_CMYK_master-beechcraft-primary-black.png"/>
+            <img src="https://www.campsystems.com/hs-fs/hubfs/01%20CAMP%20Website%20Graphics/OEM%20Logos_Sized/CAMP%20Bell%20Textron.png?width=451&height=300&name=CAMP%20Bell%20Textron.png"/>
+            <img src="https://www.campsystems.com/hs-fs/hubfs/CAMP%20DHC.png?width=451&height=300&name=CAMP%20DHC.png"/>
+            <img src="https://www.campsystems.com/hs-fs/hubfs/Kodiak-family-(white-bg).png?width=1200&height=627&name=Kodiak-family-(white-bg).png"/>
+  </div>
+  <button class="scroll-button scroll-right" onclick="scrollRight()">&#8250;</button>
+</div>
+
+<script>
+const imagejust = document.getElementById('imagejust');
+const scrollAmount = 300; // Adjust scroll amount per button click (in pixels)
+
+function scrollLeft() {
+  if (imagejust.scrollLeft <= 10) {
+    imagejust.scrollTo({ left: 0, behavior: 'smooth' });
+  } else {
+    imagejust.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  }
+}
+
+function scrollRight() {
+  if (imagejust.scrollLeft + imagejust.clientWidth >= imagejust.scrollWidth - 10) {
+    imagejust.scrollTo({ left: 0, behavior: 'smooth' });
+  } else {
+    imagejust.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  }
+}
+</script>
+
+</body>
+</html>

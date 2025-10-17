@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dropdown Menu with Down Arrow</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: black;
+      color:white;
+      display:inline-flex;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropbtn {
+      background-color: transparent;
+      color: rgb(255, 255, 255);
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .dropbtn:after {
+      content: "\25BC";  /* Unicode downward triangle */
+      font-size: 12px;
+      margin-left: 8px;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 4px;
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+      border-bottom: 1px solid #eee;
+    }
+    .dropdown-content a:last-child {
+      border-bottom: none;
+    }
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+    .dropdown.show .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div>Contact Us</div>
+  
+  <div class="dropdown" id="eventsDropdown">
+    <button onclick="toggleDropdown('eventsDropdown')" class="dropbtn">Events & Training∨</button>
+    <div class="dropdown-content">
+      <a href="#">Events</a>
+      <a href="#">Training</a>
+    </div>
+  </div>
+  
+  <div class="dropdown" id="productsDropdown">
+    <button onclick="toggleDropdown('productsDropdown')" class="dropbtn">Product & Services∨</button>
+    <div class="dropdown-content">
+      <a href="#">CAMP Maintenance(MTX) Management</a>
+      <a href="#">CAMP Engine Health Monitoring (EHM)</a>
+      <a href="#">CAMP Inventory Management (IMS)</a>
+      <a href="#">CAMP Flight Scheduling (FS)</a>
+    </div>
+  </div>
+  
+  <div>OEM Partnerships</div>
+  <div>Careers</div>
+  
+  <div class="dropdown" id="resourcesDropdown">
+    <button onclick="toggleDropdown('resourcesDropdown')" class="dropbtn">Resources∨</button>
+    <div class="dropdown-content">
+      <a href="#">About Us</a>
+      <a href="#">News</a>
+    </div>
+  </div>
+  
+  <div class="dropdown" id="supportDropdown">
+    <button onclick="toggleDropdown('supportDropdown')" class="dropbtn">Support∨</button>
+    <div class="dropdown-content">
+      <a href="#">Need Help?</a>
+      <a href="#">Login FAQs</a>
+      <a href="#">SSO Login</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleDropdown(dropdownId) {
+  // Close all dropdowns first
+  var dropdowns = document.getElementsByClassName("dropdown");
+  for (var i = 0; i < dropdowns.length; i++) {
+    var openDropdown = dropdowns[i];
+    if (openDropdown.id !== dropdownId) {
+      openDropdown.classList.remove('show');
+    }
+  }
+
+  // Toggle the specific dropdown
+  var dropdown = document.getElementById(dropdownId);
+  dropdown.classList.toggle("show");
+}
+
+// Close the dropdown if user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown");
+    for (var i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+</body>
+</html>

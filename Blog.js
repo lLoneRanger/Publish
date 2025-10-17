@@ -1,0 +1,5 @@
+// JavaScript to toggle the dropdown menu
+      function toggleMenu() {
+        const menu = document.getElementById("dropdown-menu");
+        menu.classList.toggle("active");
+      }

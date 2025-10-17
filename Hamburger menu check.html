@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hamburger Menu Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      background: #333;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .menu {
+      display: none;
+      flex-direction: column;
+      background: #444;
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      min-width: 120px;
+      border-radius: 5px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .menu a {
+      color: #fff;
+      padding: 10px;
+      text-decoration: none;
+      border-bottom: 1px solid #555;
+    }
+    .menu a:last-child {
+      border-bottom: none;
+    }
+    .hamburger {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .bar {
+      height: 4px;
+      width: 100%;
+      background: #fff;
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+    /* Show menu when active */
+    .menu.active {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div>My Site</div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </div>
+  <nav class="menu" id="menu">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+    }
+    // Optional: Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      var menu = document.getElementById('menu');
+      var hamburger = document.querySelector('.hamburger');
+      if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+        menu.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

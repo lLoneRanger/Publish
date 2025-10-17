@@ -1,0 +1,286 @@
+html {
+  font-size: 100.01%;
+}
+/* reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+hr,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfont,
+thead,
+tr,
+th,
+td {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-size: 100%;
+}
+dfn,
+i,
+cite,
+var,
+address,
+em {
+  font-style: normal;
+}
+th,
+b,
+strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+textarea,
+input,
+select {
+  font-family: inherit;
+  font-size: 1em;
+}
+blockquote,
+q {
+  quotes: none;
+}
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+  content: none;
+}
+ol,
+ul {
+  list-style: none;
+}
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption,
+th,
+td {
+  text-align: left;
+}
+:focus {
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font: 0.8125em/1.5 Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+header,
+nav,
+section,
+article,
+aside,
+footer {
+  display: block;
+}
+/*---------------------Start Here---------------*/
+
+header, footer {
+  background: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  background: #f167ac;
+  border-radius: 6px;
+  color: #fff;
+  display: flex;
+  font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
+  padding: 4px 1px 5px;
+  text-align: center;
+}
+
+header:hover,
+nav:hover,
+section:hover,
+aside:hover,
+footer:hover {
+  background: #ebe6e6;
+}
+article:hover {
+  background: #ccc;
+}
+article header:hover {
+  background: #ccc;
+}
+
+main{
+border-style: solid;
+border-width: 5px;
+border-color: #09742c;
+}
+
+header h1 {
+    width: 15%;
+    font: 25px/1.2 "Brush Script MT", cursive;
+    color: red;
+    background-color: black;
+    margin: 0 10px 0;
+}
+nav {
+  /*align-items: center;  Align items vertically */
+  display: flex; 
+  justify-content: space-between; /* Adjust spacing between items */
+  margin: 1px 0;
+  padding: 5px 0px 15px;
+  background: #41beb8
+}
+nav h3 {/* Hide visually but remain accessible to screen readers */
+       position: absolute !important;
+        clip: rect(1px 1px 1px 1px);  /*IE6, IE7 */
+        clip: rect(1px, 1px, 1px, 1px);
+        padding:0 !important;
+        border:0 !important;
+        height: 1px !important;
+        width: 1px !important; 
+        overflow: hidden;
+}
+
+section {
+  width: 30%;
+  float: left;
+  padding: 10px 20px;
+  margin: 0px 5px;
+  border-style:solid;
+  border-width: 5px;
+  border-color: #090b74;
+}
+
+/* Making summary and details work */
+summary {
+  display:block; 
+  background:#99B92C;
+  color:white;
+  border-radius:5px;
+  padding:5px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+summary::-webkit-details-marker {
+   color:#FF0000; 
+   background:#FFFFFF; 
+}
+
+details[open] summary::-webkit-details-marker {/* Change color when open */
+   color:#0000FF; 
+   background:#00FFFF;
+}
+
+summary::-webkit-details-marker {
+   display: none
+}
+
+summary:after {/* Add a "plus" sign to indicate expandable content */
+   content: "+";
+   color: #FF00FF;
+   float: left;
+   font-size: 1.5em;
+   font-weight: bold;
+   margin: -5px 5px 0 0;
+   padding: 0;
+   text-align: center;
+   width: 20px;
+}
+
+details[open] summary:after {
+   content: "-";
+  color: #FFFFFF
+}
+
+video{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+}
+
+audio{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+}
+
+
+footer {
+  clear: both;
+  color: #777;
+  padding: 10px 50px;
+}
