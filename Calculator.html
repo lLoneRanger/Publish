@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="calc.css" />
+  </head>
+  <header></header>
+  <body>
+    <div id="screen"> 0</div>
+    <div id="other-commands">
+      <div id="special">
+        <button id="percent" onclick="percent()">%</button>
+        <button id="pos-neg" onclick="posNeg()">+/-</button>
+        <button id="sqrt" onclick="sqrt()">√</button>
+        <button id="square" onclick="square()">x²</button>
+        <button id="backspace" onclick="backspace()">←</button>
+      </div>
+      <div id="conversion">
+      <button id="convert" onclick="ltr-lbs()">ltr-lbs</button>
+      <button id="convert" onclick="lbs-ltr()">lbs-ltr</button>
+      <button id="convert" onclick="km-miles()">km-mls</button>
+      <button id="convert" onclick="miles-km()">mls-km</button>
+      <button id="convert" onclick="cm-inch()">cm-in</button>
+    <button id="convert" onclick="inch-cm()">in-cm</button>
+    </div>
+    </div>
+    
+    <div id="down">
+    <div id="numbers">
+      <button id="1" onclick="1()">1</button>
+      <button id="1" onclick="2()">2</button>
+      <button id="1" onclick="3()">3</button>
+      <button id="1" onclick="4()">4</button>
+      <button id="1" onclick="5()">5</button>
+      <button id="1" onclick="6()">6</button>
+      <button id="1" onclick="7()">7</button>
+      <button id="1" onclick="8()">8</button>
+      <button id="1" onclick="9()">9</button>
+      <button id="1" onclick="0()">0</button>
+      <button id="1" onclick="dec()">.</button>
+    </div>
+    <div id="general-c">
+      <button id="add" onclick="add()">+</button><br>
+      <button id="sub" onclick="sub()">-</button><br>
+      <button id="div" onclick="div()">/</button><br>
+      <button id="mult" onclick="mult()">*</button><br>
+    </div>
+    <div id="equal">
+        <button id="clear" onclick="clearScreen()">C</button> 
+        <button id="eq" onclick="eq()">=</button><br>
+    </div>
+    </div>
+  </body>
+</html>

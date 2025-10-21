@@ -45,3 +45,50 @@
 // }
 
 // countdown()//output data from the functions
+
+// function displayname(){
+//     console.log(42)
+// }
+
+// displayname()
+
+// let lap1 =34
+// let lap2 =33
+// let lap3 = 36
+
+// function totalt(){
+//     //let total = lap1+lap2+lap3
+//     console.log(lap1 +lap2+lap3)
+// }
+
+// totalt()
+
+// let lapscompleted = 0
+
+// function tlaps(){
+//     lapscompleted =lapscompleted+1
+// }
+
+// tlaps()
+// tlaps()
+// tlaps()
+
+//     console.log(lapscompleted) 
+let countEl = document.getElementById("count-el")
+
+let count=0
+
+function increment()
+{
+    count+=1
+    countEl.innerText=count
+}
+
+let saveEl=document.getElementById("save-el")
+
+function save()
+{
+   saveEl.textContent+= count + ' - '
+   countEl.innerText=0
+   count=0
+}

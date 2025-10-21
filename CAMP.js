@@ -17,6 +17,10 @@ function scrollRight() {
   } else {
     imagejust.scrollBy({ left: scrollAmount, behavior: 'smooth' });//does the scrolling
   }
+
+    // Attach to global scope if needed
+  window.scrollLeft = scrollLeft;
+  window.scrollRight = scrollRight;
 }
 
  
