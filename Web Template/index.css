@@ -140,7 +140,7 @@ body {
 body {
   font: 0.8125em/1.5 Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
   background: #fff;
-  color: #333;
+  color: #000000;
 }
 
 header,
@@ -150,6 +150,25 @@ article,
 aside,
 footer {
   display: block;
+}
+
+/* For other screen sizes */
+@media (max-width: 900px) {
+  .container { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .hamburger { display: block; }
+  .dropmenu { display: none; }
+  header { flex-wrap: wrap; padding: 10px; }
+  .logo-image img { height: 40px; }
+  .Logo h1 { font-size: 1.2em; }
+  .search-box { order: 3; width: 100%; margin-top: 10px; }
+  .search-box input[type="text"] { width: 70%; }
+}
+
+@media (max-width: 600px) {
+  .container { grid-template-columns: 1fr; }
 }
 /*---------------------Start Here---------------*/
 
