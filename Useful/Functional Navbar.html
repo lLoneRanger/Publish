@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functional Navbar</title>
+    <style>
+      body {
+        width: 100.01%;
+      }
+      nav {
+        display: flex;
+        width: 100%;
+        float: center;
+        position: fixed; /* Fix the nav position */
+        margin: 0 0 0 0;
+        top: 45px; /* Position it below the header */
+        z-index: 999; /* Ensure it stays on top */
+        background-color: white;
+        box-shadow: 3px 3px 5px 5px #ccc(0, 0, 0, 0.1);
+        border-style:hidden
+      }
+
+      nav ul {
+        display: flex;
+        width: 100%;
+        list-style: none;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 20px;
+      }
+      nav li {
+        height: 50px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: black;
+        height: 100%;
+        display: flex;
+        padding: 0 30px;
+        align-items: center;
+      }
+
+      nav a:hover {
+        background-color: rgb(240, 240, 240);
+      }
+
+      nav li:first-child {
+        margin-right: auto;
+      }
+
+      .sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100vh;
+        background-color: rgb(173, 98, 98);
+        /* backdrop-filter: blur(10px); */
+        z-index: 999;
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        /* align-items: flex-start; */
+        justify-content: flex-start;
+      }
+
+      .sidebar li,
+      .sidebar a {
+        width: 100%;
+      }
+
+      .menu-button {
+        display: none;
+      }
+
+      @media (max-width: 900px) {
+        .hideOnMobile {
+          display: none;
+        }
+        .menu-button {
+          display: block;
+        }
+      }
+
+            @media (max-width: 400px) {
+        .hideOnMobile {
+          display: none;
+        }
+        .sidebar {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#"
+            ><img
+              src="https://cdn-icons-png.flaticon.com/128/458/458595.png"
+              height="25%"
+          /></a>
+        </li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li class="hideOnMobile"><a href="#">Features</a></li>
+        <li class="hideOnMobile"><a href="#">About Us</a></li>
+        <li class="hideOnMobile"><a href="#">Testimonials</a></li>
+        <li class="hideOnMobile"><a href="#">Blog</a></li>
+        <li class="hideOnMobile"><a href="#">Contact</a></li>
+        <li class="menu-button" onclick="showSidebar()">
+          <a class="lines" href="#">
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/10486/10486773.png"
+              height="35%"
+            />
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <script>
+      function showSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+      }
+
+      function hideSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

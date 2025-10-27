@@ -135,6 +135,7 @@ td {
 html,
 body {
   height: 100%;
+  width:100%;
 }
 
 body {
@@ -172,17 +173,26 @@ footer {
     overflow: none;
     padding-top:30px;
 }
+
+.show
+{
+  display: none;
 }
 
-@media (max-width: 768px) {
-  .hamburger { display: block; }
-  .dropmenu { display: none; }
-  .logo-image img { height: 40px; }
-  .Logo h1 { font-size: 1.2em; }
-  .search-box { order: 3; width: 100%; margin-top: 10px; }
-  .search-box input[type="text"] { width: 70%; }
-  
-  #communicate1 {
+.sidebar{
+  display:block;
+}
+
+.hbar .menu-button {
+  display: block;
+  align-content:center;
+}
+}
+
+@media (max-width: 400px) {
+  #low-items { grid-template-columns: 1fr; }
+
+#communicate1 {
   width:70%; 
   display:inline;
   margin: 15% 15%;
@@ -195,10 +205,19 @@ footer {
     overflow: none;
     padding-top:30px;
 }
+
+.show
+{
+  display: none;
 }
 
-@media (max-width: 600px) {
-  #low-items { grid-template-columns: 1fr; }
+.sidebar{
+  width:100%;
+}
+
+.menu-button{
+  display:block;
+}
 }
 /*---------------------Start Here---------------*/
 
@@ -257,92 +276,175 @@ header #right img {
 }
 
 /*Nav Section*/
-nav{
-  display: flex; 
-  width:100%;
-  float:center;
-  position: fixed; /* Fix the nav position */
-  margin: 0 0 0 0;
-  padding: 15px 0px;
-  top: 45px; /* Position it below the header */
-  z-index: 999; /* Ensure it stays on top */
-  background-color:white;
-  box-shadow: 3px 3px 5px 5px #ccc(0, 0, 0, 0.1);
+nav {
+        width: 100%;
+        position: fixed; /* Fix the nav position */
+        /* margin: 0 0 0 0; */
+        margin-right:10%;
+        top: 40px; /* Position it below the header */
+        z-index: 999; /* Ensure it stays on top */
+        background-color: white;
+        box-shadow: 3px 3px 5px 5px #ccc(0, 0, 0, 0.1);
+        padding: 0 15%;
 }
 
-/*Nav Left Div*/
-nav #imagine-logo {
-    font-size: 16px;
-    letter-spacing: 1.5px;
-    margin-left: 15%;
-}
-
-nav a {
-    text-decoration: none;
-    color: black;
-}
-
-nav b{
-  color:rgb(66, 129, 224);
-}
-
-
-/*Nav Right Div*/
-nav #menu {
-    margin-left: auto;
-    margin-right: 15%;
-}
-
-
-nav ul{
-  display:flex;
+nav ul {
+  display: flex;
   width: 100%;
-  list-style:none;
+  list-style: none;
   justify-content: flex-end;
   align-items: center;
-  gap:20px;
+  align-content:center;
+  justify-content:center;
 }
+
  nav li{
   height: 50px;
  }
 
- nav a{
-  height:100%;
-  display:flex;
-  padding: 0 30px;
-  align-items: center;
-  color:black;
+  nav li:first-child {
+        margin-right:auto;
+      }
+
+nav a {
   text-decoration: none;
- }
+        color: black;
+        height: 100%;
+        display: flex;
+        padding: 10px 30px;
+}
 
- nav a:hover{
-  background-color: rgb(240, 240, 240);
-  border-radius: 20px;
- }
+nav b, .hbar a:hover{
+  color:  rgb(68, 117, 253);
+}
 
- nav li:first-child{
-  margin-right:auto;
- }
+.hbar{
+width:70%;
+} 
 
+.show{
+  align-content: center;
+  justify-items:center;
+  width: 100px;
+  height:40px;
+  text-align: center;
+  text-wrap: nowrap;
+}
+
+.show button{
+  margin-left:-25px;
+}
+ .hbar #imagine-logo {
+  font-weight:500;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    margin-right:auto;/*This send the box to the right */
+}
+
+      .menu-button {
+        display: none;
+        align-content: center;
+      }
+
+.about-us, .about-us2{
+  display: flex;
+  flex-direction: column;
+  margin-top:-20px;
+  background-color: white;
+  margin-top: 0px;
+  display:none;
+  position:absolute;/*This ensure it displays over others*/
+}
+
+#shrink{
+  width:1%;
+}
+
+.about-us2{
+  margin-left:-100px;
+  width:15%;
+  height: 300%;
+  padding: 0 0;
+}
+
+nav button{
+  border-style:none;
+  background-color:white;
+  position: inherit !important;
+}
+
+
+ /*Sidebar*/
  .sidebar{
   position:fixed;
   top: 0;
   right:0;
-  width: 250px;
+  width: 200px;
   height: 100vh;
-  background-color: rgb(160, 155, 155);
+  background-color: #ffffff;
   backdrop-filter: blur(10px);
-  z-index:999;
+  z-index:1001;
   box-shadow: -10px 0 10px rgba(0,0,0, 0.1);
   display: flex;
   flex-direction: column;
   align-items:flex-start;
   justify-content:flex-start;
+  margin-top:45px;
+  display:none;
  }
+
+ .sidebar a{
+  align-items:center;
+  padding: 0px 20px;
+  margin: 0 -20px 0 0;
+ }
+
+ #line{
+  display: flex;
+  align-items:center;
+ }
+
+ #line a{
+  width:60px;
+ }
+
+ #line button, .show button{
+  padding: 3px 5px;
+  margin-top:-3px;
+  background-color: #94949427;
+  justify-items:center;
+  border-radius: 50%;
+  font-size:10px;
+ }
+
+ .sidebar .about-us{
+  color:white;
+ }
+
+ .sidebar button{
+  padding-left:20px;
+  padding-top: 10px;
+ }
+
+ #go-left{
+  margin-left: 150px;
+  padding: 0 0 0 0;
+ }
+
+  .sidebar img:hover{
+  filter: brightness(50%);/*makes the image darker */
+ }
+
+ .sidebar a:hover, nav button:hover, .about-us:hover, .about-us2:hover{
+  color:rgb(68, 117, 253);
+ }
+
 
  .sidebar li, .sidebar a{
   width:100%;
- }
+  padding-bottom:0;
+  height: 40px;
+ } 
 
 
 /*Section Styles*/
@@ -363,7 +465,6 @@ float:left;
 width:35%;
 align-content: center;
 }
-
 
 #make-your #bold {
   font-weight: bold;
@@ -418,7 +519,7 @@ p{
   margin-bottom: 15px;
 }
 
-bold {
+.bold {
   font-weight: bold;
 }
 
@@ -452,28 +553,71 @@ a{
 
 #low-items div{
   box-sizing:border-box;
-  margin: 20px 0;
+  margin: 30px 0;
+  padding: 0px 20px 20px 20px;
+  transition: transform 0.3s ease;
+  background-color: #bbbbbb67;
+  border-radius: 5px;
 }
 
 #low-items img{
   width:15px;
   height:15px;
-  margin-top:-35px;
-  background-color: aqua;
+  margin-top:-30px;
+  background-color: rgb(66, 129, 224);
   padding: 20px 20px;
   border-radius: 50%;
 }
+
+#low-items div:hover{
+  background-color:rgb(66, 129, 224);
+  color:white;
+   transform: translateY(-10px); /* moves the div 10px up */
+}
+
+#low-items div:hover a{
+  color:white;
+}
+
+#low-items div:hover img{
+  background-color:white;
+  filter:sepia(100%);
+}
+
 /*Section 3 */
-#communicate1 {
+#communicate1, 
+#communicate2, 
+#communicate3, 
+#communicate4,
+#about-us,
+.center {
   display: flex;
-  width:70%; 
-  margin: 15% 15%;
+  padding: 0 15%;
+  margin: 0% 0%;
+  border-style:solid;
 }
 
 #image{
 width:60%;
 align-content: center;
 padding-right:30px;
+transform: translateX(-100%);
+opacity: 0;
+transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+#communicate1:hover #image,
+#communicate1:hover #cofounder,
+#communicate2:hover #image,
+#communicate2:hover #cofounder,
+#communicate3:hover #image,
+#communicate3:hover #cofounder,
+#communicate4:hover #image,
+#communicate4:hover #cofounder,
+#about-us #image
+{
+ transform: translateX(0);
+  opacity: 1;
 }
 
 #text{
@@ -514,6 +658,9 @@ border-left-width:6px;
 padding-left:15px;
 box-shadow: #777 0px 0px 10px;
 padding-bottom: 2px;
+transform: translateX(200%);
+opacity: 0;
+transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 #cofounder p{
@@ -521,43 +668,29 @@ padding-bottom: 2px;
 }
 
 /*Section 4 */
-#communicate2 {
-  display: flex;
-  width:70%; 
-  margin: 15% 15%;
-}
+
 /*Section 5 */
-#communicate3 {
-  display: flex;
-  width:70%; 
-  margin: 15% 15%;
-  
-}
+
 /*Section 6 */
-#communicate4{
-  display: flex;
-  width:70%;
-  margin: 15% 15%;
-  
-}
+
 /*Section 7 */
-.about-us {
+.aboutus {
 background-color: #777;
-align-content: center;
-align-items:center;
-justify-content: center;
-justify-items: center;
-text-align:center
+align-items: center;
 }
 
-
-#about-us{
-  display:flex;
-  width:70%;
-  margin: 0% 15%;
-  text-align:left;
+.aboutus .top{
+  height: 5%;
+  align-items: center;/*vertical align*/
+  display: flex;
+  /* float:right;positions the box after use of flex if it fits */
+  justify-content: center;/* moves the items in the box horizontally  */
+  padding: 20px 0 0 0;
 }
 
+#about-us #text span{
+  font-size: 15px;
+}
 
 #about-us button {
   background-color: rgb(66, 129, 224);
@@ -569,7 +702,76 @@ text-align:center
   margin-top: 15px;
   border-radius: 20px;
 }
+
 /*Section 8 */
+.our-team{
+  display:flex;
+  flex-direction: column;
+  height:auto;
+  padding: 0 15%;
+}
+
+.our-team .top{
+  height: 10%;
+  align-items: center;/*vertical align*/
+  flex-direction:column;
+  /* float:right;positions the box after use of flex if it fits */
+  justify-content: center;/* moves the items in the box horizontally  */
+  padding:  30px 0;
+  text-align: center;
+}
+
+.our-team .bottom{
+  display: flex;
+  flex-wrap:wrap;
+  flex: 1 1 calc(33% 10px);
+  justify-content:center;
+}
+
+.our-team .bottom .image{
+  width:30%;
+  margin: 0 18px 20px 0;
+}
+
+.our-team .bottom .image img{
+  width:100%;
+  height:auto;
+}
+
+.image-icon {
+height:6%;
+display:flex !important;
+flex-direction: row !important;
+flex-wrap:nowrap !important;
+margin-top:-20px;
+position: relative;
+align-content: center;
+justify-items: center;
+justify-content:center;
+background-color: aqua;
+transform: translateY(100%);
+opacity: 0;
+transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.image:hover .image-icon{
+  transform: translateY(0) !important;
+  opacity:1 !important;
+}
+
+.image-icon img{
+  width:15px !important;
+  height:auto;
+  margin: 1px 5px;
+}
+
+#blue{
+  color:aqua;
+}
+
+#noDisplay{
+  display:none;
+}
 /*Section 9 */
 /*Section 10 */
 /*Section 11 */

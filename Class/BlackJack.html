@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<head>
+<title> BlackJack</title>
+<style>
+    html{
+        /* background-image: url("");
+        background-repeat: no-repeat;
+        background-position: center; 
+        background-size: cover; */
+        background-color: rgb(143, 37, 37);
+    } 
+
+    header{
+        text-align: center;
+        font-weight: bolder;
+        font-size:32px;
+        padding-top:40px;
+    }
+
+    body{
+        float:center;
+        text-align:center;
+    }
+
+    main{
+        padding-top:30px;
+        padding-bottom:0;
+        text-align:center;
+    }
+
+    p{
+        color: rgb(228, 230, 201);
+    }
+
+    #total{
+        display:none;
+        text-align:center;
+    }
+
+    button{
+        margin-bottom: 10px;
+    }  
+</style>
+</head>
+
+<body>
+<header>
+    <span>BlackJack</span>
+</header>
+<main>
+    <p id="messageStatus"> Click Start Game to begin</p>
+    <p id="cardDisplay"></p>
+    <p id="total"> Total =</p>
+    <button id="startGame" onclick="newGame()">Start Game</button><br>
+    <button id="newCard" onclick="newCard()">New Card</button>
+    <p id="player-el"></p>
+</main>
+
+<script>
+    let newGames = document.querySelector("#startGame");
+    let displayTotal = document.querySelector("#total");
+    let cardDisp= document.querySelector("#cardDisplay");
+    let message= document.querySelector("#messageStatus");
+    let playerel= document.querySelector("#player-el");
+    let firstCard = Math.floor(Math.random()*10)+1;
+    let secondCard = Math.floor(Math.random()*10)+1;
+    let card = [firstCard, secondCard];
+    let isAlive=false;
+    let blackJack=false;
+
+    let player = { //creating an object with multiple variables
+        name: "Elel",
+        cash: 124
+    }
+
+function newGame(){
+    let total=0;
+    let cardsList =" ";
+    let status;
+    newGames.style.display= "none";
+    displayTotal.style.display = "inline";
+    isAlive=true;
+
+    for(let i = 0; i<card.length; i++)
+    {
+        if(card[i]===1)
+    {
+        card[i] =11;
+    }
+         total += card[i];
+        cardsList += card[i] + " ,";
+    }
+
+    if(total === 21)
+    {
+     status= 'Blackjack';
+     blackJack= true;
+    }
+
+    else if(total <= 20)
+    {
+    status = 'Do you want another deal?';
+    blackJack = false;
+    }
+
+    else{
+        status ='You are out of the game';
+        blackJack = true;
+    }
+
+    message.innerText = status;
+    cardDisp.textContent = "Your cards are " + cardsList;
+    displayTotal.textContent = "Total = " + total;
+    playerel.innerText = player.name + ' wins ' + player.cash;
+}
+
+function newCard(){
+    if(isAlive==true && blackJack==false)
+    {
+    card.push(Math.floor(Math.random()*10)+1);
+    newGame();
+}
+}
+
+</script>
+</body>
+</html>

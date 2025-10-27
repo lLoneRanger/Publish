@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Fruits sorting</title>
+    <style>
+        body{
+            align-content:center;
+            justify-content: center;
+        }
+        #apple-shelf{
+            background-color: greenyellow;
+            padding: 20 20;
+            text-align: center;
+        }
+
+        #orange-shelf{
+            background-color: orange;
+            margin-top:20;
+            padding: 20 20;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+<main>
+<div id="apple-shelf"></div>
+<div id="orange-shelf"></div>
+</main>
+
+<script>
+let fruits = ["apple","orange", "orange", "apple", "orange"]
+let appleShelf = document.getElementById("apple-shelf")
+let orangeShelf = document.getElementById("orange-shelf")
+let appleArr =[]
+let orangeArr = []
+
+for(let i=0; i<fruits.length; i++){
+//individually check if all the fruits are either apple or orange
+if (fruits[i]==="apple")
+{
+    //push the values of apples to a different array say appleArr   
+    appleArr.push(fruits[i])
+}
+else{
+    //push the values of orange to different array say orangeArr
+    orangeArr.push(fruits[i])
+}
+}
+
+//change the text content in the orangeShelf with the amount in Arr
+orangeShelf.textContent = orangeArr
+//change the text content in the appleShelf with the amount in Arr
+appleShelf.textContent = appleArr
+</script>
+</body>
+</html>

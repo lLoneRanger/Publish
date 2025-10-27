@@ -42,4 +42,18 @@
 // console.log(fastest)
 // console.log(total)
 
-alert( "I'm JavaScript!" );
+// alert( "I'm JavaScript!" );
+
+let airBnb = {//writing objects
+    location: "France",
+    Name: "La sdks",
+    cost: 433,
+    pastClient:["Rice", 47,"Moi"],
+    available: true,
+    sayHello: function(){
+        console.log("Hello")
+    }
+}
+
+console.log(airBnb.available)
+console.log(airBnb.sayHello)

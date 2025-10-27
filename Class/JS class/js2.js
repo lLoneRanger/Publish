@@ -54,67 +54,8 @@
 // ans.textContent = 'Div' + res
 // }
 
-// BlackJack
-let firstCard = 5
-let secondCard = 4
-let cards =[firstCard, secondCard]
-//cards.length tells the amount of items in the array when combined with console.log
-//cards.push(newnumber) is used to add new items
-//cards.pop is used to remove the last item
-let disp= cards[0] + ' and ' + cards[1]
-let message = ""
-let messageEl = document.getElementById("message-el")
-let sumEl= document.querySelector("#sum-el")//another method by works with # before the id
-let numsEl = document.querySelector(".nums")//another method but works with a dot before class
 
-var sum =cards[0] + cards[1]
-
-function getRandomCard(){
-  //let ran = Math.random()//between 0 and 1
-  //let ran = Math.random()*6//between 0 and 6
-  //let ran = Math.floor(3.95632)//removes decimals
-  let ran=Math.floor(Math.random()*14)
-  return ran;
-}
-
-function startGame()
-{
-    Game()
-}
-
-function Game(){
-if(sum === 21)
- {
-message = 'Blackjack'
- }
-
- else if(sum <= 20)
- {
-   message = 'Do you want another deal?'
- }
-
- else{
-     message ='You are out of the game'
- }
-
-numsEl.textContent= cards.length + 'Cards: ' + disp
-messageEl.textContent=message
-sumEl.textContent= 'Sum = ' + sum
-}
-
-function newCard()
-{
-cards.push(getRandomCard())
-for(let i=2;i<cards.length;i+1)
-{
-sum+=cards[i]
-disp += ' and ' + cards[i]
-Game()
-}
-}
-
-
-//Nightclub Age
+//Lesson 3 - Nightclub Age
 // let age = 21
 
 // if (age<21)
@@ -150,3 +91,96 @@ for (let i=0; i<sentence.length;i++)
   greetingEl.textContent+=sentence[i] + ' '
 }
   */
+
+//Lesson 4 - object.keys(values), Creating objects
+// let person = {
+//   name: "Yinka",
+//   age: 15,
+//   country: "Pakistan"
+// }
+
+// function logData()
+// {
+//   console.log(person.name + " is " + person.age + " years old and lives in " + person.country)
+// }
+
+// logData()
+
+//Lesson 5 - if else
+//   let age = 19
+//   let access = true
+
+// if (age < 18 && access === true){
+//   console.log ("underage with access")
+// }
+
+// else if(age < 18 && access === false){
+//   console.log ("You're not allowed")
+// }
+
+// else if(age > 18){
+//   console.log ("Welcome")
+// }
+
+//Lesson 6 - shift() and unshift()
+
+// let arr = ["goat","ram", "sheep","cow","donkey"]
+
+// // let rem = arr.shift();removes and stores the first item
+// //let rem = arr.unshift("camel");inserts item as first item and returns the array length
+
+// console.log(arr.length)
+// // console.log(rem)
+// for(let i=0;i<arr.length;i++)
+// {
+// console.log(arr[i])
+// }
+
+//Lesson 7 - Rock, Paper and Scissors
+// let handSigns = ["rock","paper","scissors"]
+
+// function currentHand(){
+//   let number = Math.floor(Math.random()*3)
+//   return number
+// }
+
+// let handOne = handSigns[currentHand()]
+// let handTwo = handSigns[currentHand()]
+
+// console.log("First Hand = " + handOne)
+// console.log("Second Hand = " + handTwo)
+
+// if (handOne === handTwo)
+// {
+//   console.log("Draw")
+// }
+
+// else if (handOne === "rock" && handTwo ==="paper")
+// {
+//   console.log("Second Hand wins")
+// }
+
+// else if (handTwo === "rock" && handOne ==="paper")
+// {
+//   console.log("First Hand wins")
+// }
+
+// else if (handOne === "paper" && handTwo ==="scissors")
+// {
+//   console.log("Second Hand wins")
+// }
+
+// else if (handTwo === "paper" && handOne ==="scissors")
+// {
+//   console.log("First Hand wins")
+// }
+
+// else if (handTwo === "rock" && handOne ==="scissors")
+// {
+//   console.log("Second Hand wins")
+// }
+
+// else if (handOne === "rock" && handTwo ==="scissors")
+// {
+//   console.log("First Hand wins")
+// }
