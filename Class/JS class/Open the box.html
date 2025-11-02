@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Chrome Extension</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+      }
+
+      button {
+        background-color: #5f9431;
+        width: 50%;
+        border-style: none;
+        margin-top: 3;
+        padding: 10 0;
+        color: white;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <button id="open-box">OPEN THE BOX</button>
+      <p id="reveal-item"></p>
+    </main>
+
+    <script>
+      let openBox = document.getElementById("open-box")
+      let revealItem = document.getElementById("reveal-item")
+
+      openBox.addEventListener("click", function () {
+        revealItem.textContent = "BOX OPENED"
+        openBox.textContent = "OPENED"
+      })
+    </script>
+  </body>
+</html>

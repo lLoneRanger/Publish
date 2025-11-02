@@ -424,14 +424,15 @@ padding-top:10px;
 
 #imagejust{
       display: flex;
-      overflow-x: scroll;
+      overflow-x: auto;
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none; /* Firefox */
       padding-top: 40px;
+      white-space: nowrap; /* if horizontal scrolling depends on inline/nowrap content */
 }
 
-    #imagejust::-webkit-scrollbar {
+#imagejust::-webkit-scrollbar {
       display: none; /* Chrome, Safari */
     }
 

@@ -5,15 +5,23 @@ body{
 #screen
 {
     width: 80%;
-    height: 80px;
+    height: 50px;
     border-style: solid;
     text-align: right;
-    font-size: 25px;
+    font-size: 15px;
     margin-bottom: 5px;
     border-style: solid;
     background-color:bisque;
     border-radius: 10px;
     border-width:0.1px;
+    box-sizing: border-box;
+}
+
+#answer{
+    width: 100%;
+    font-weight: bold;
+    margin-top:5px;
+    transform:translateX(-3%);
 }
 
 button{

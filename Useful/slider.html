@@ -1,0 +1,125 @@
+<html>
+<head>
+    <style>
+    .image-slider {
+    position: relative; /*retains it normal position*/
+    width: 100%; /* adjust as needed */
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content:center;
+    float:center;
+    }
+
+    .slide {
+    width: 20%;
+    height: 70%;
+    display: none;  /*hide all images initially */
+    position: absolute;/*pulls the element out of normal flow*/
+    top: 0;
+    /*left: 0; */
+    }
+
+    .slide.active {
+    display: block;
+    }
+
+    .dots {
+    text-align: center;
+    padding-top: 250px;
+    }
+
+    .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: gray;
+    cursor: pointer;
+    }
+
+    .dot.active {
+    background-color: blue;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="image-slider">
+        <img src="https://preview.colorlib.com/theme/imagine/images/person_1.jpg" class="slide" />
+        <img src="https://preview.colorlib.com/theme/imagine/images/person_2.jpg" class="slide" />
+        <img src="https://preview.colorlib.com/theme/imagine/images/person_3.jpg" class="slide" />
+        <img src="https://preview.colorlib.com/theme/imagine/images/person_4.jpg" class="slide" />
+        <img src="https://preview.colorlib.com/theme/imagine/images/person_5.jpg" class="slide" />
+
+        <div class="dots">
+            <span class="dot" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+            <span class="dot" data-index="4"></span>
+        </div>
+    </div>
+
+    <script>
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentIndex = 0;
+    let intervalTime = 1000; // 5 seconds,time intervals are specified in milliseconds
+    let slideInterval;
+
+    //To display the slide.
+    // x.forEach((a, b) calls the arrow function => { ... } once for each slide.
+    //.forEach() is an array method that loops through each slide.
+    // i is the index of this slide in the slides array, starting from 0. So, for the first slide i = 0, second slide i = 1, etc.
+    function showSlide(index) {
+    slides.forEach((slide, i) => {
+        // if i===index =true, make the slide and dots[i] active
+        // if i===index =false, make the slide and dots[i] not active
+        slide.classList.toggle('active', i === index);
+        dots[i].classList.toggle('active', i === index);
+    });
+    //re-assigns currentIndex to hold the value of index
+    currentIndex = index;
+    }
+
+    //To display next slide
+    function nextSlide() {
+    let nextIndex = (currentIndex + 1) % slides.length;
+    //say on image 1, it adds 1, becomes 2 % 5, this gives 2. shows slide 2
+    // when on image 5, 5 % 5 = 0. It moves back to zero
+    showSlide(nextIndex);
+    }
+
+    //Here is where the time to change is effected
+    function startSlideShow() {
+        //setInterval(function to execute, interval)
+    slideInterval = setInterval(nextSlide, intervalTime);
+    //setInterval, clearInterval are in-built functions
+    //It's a built-in JavaScript function that repeatedly calls a specified function at fixed time intervals
+    }
+
+    function stopSlideShow() {
+    clearInterval(slideInterval);
+    }
+
+    // Setup dot click handling
+    dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+        stopSlideShow();  // pause auto-slide on manual selection
+        let index = parseInt(dot.getAttribute('data-index'));
+        // Retrieves the value of the custom data-index attribute on the clicked dot.
+        // Converts the string value to an integer using parseInt()
+        showSlide(index);
+        startSlideShow(); // optionally resume auto-slide
+    });
+    });
+
+    // Initialize
+    showSlide(0);
+    startSlideShow();
+
+    </script>
+</body>
+</html>

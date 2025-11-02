@@ -9,6 +9,9 @@
 // example alert( `the result is ${1 + 2}` ); displays the result is 3. double quotes will display the result is ${1 + 2}.
 //let takes boolean too. E.g. let isGreater = 4 > 1; let isGreater = true;
 //let takes null too. e.g let noAnswer = null;
+/*If-else handles expected conditions as part of normal flow.
+Try-catch handles unexpected errors/exceptions to prevent crashes.
+*/
 
 /*
 TYPEOF returns a string with the type name

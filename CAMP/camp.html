@@ -5,57 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Template</title>
     <link rel="stylesheet" href="index.css" />
-
   </head>
 
   <body>
     <div class="Top-page">
-    <header>
-      <div>
-        <img
-          src="https://www.campsystems.com/hs-fs/hubfs/LOGOS/LOGOS/camp%20white%20logo.png?width=900&height=600&name=camp%20white%20logo.png"
-        />
-      </div>
-      <div class="text">
-  <div>Contact Us</div>
-  <div class="dropdown" id="eventsDropdown">
-    <button onclick="toggleDropdown('eventsDropdown')" class="dropbtn">Events & Training∨</button>
-    <div class="dropdown-content">
-      <a href="#">Events</a>
-      <a href="#">Training</a>
-    </div>
-  </div>
-  <div class="dropdown" id="productsDropdown">
-    <button onclick="toggleDropdown('productsDropdown')" class="dropbtn">Product & Services∨</button>
-    <div class="dropdown-content">
-      <a href="#">CAMP Maintenance(MTX) Management</a>
-      <a href="#">CAMP Engine Health Monitoring (EHM)</a>
-      <a href="#">CAMP Inventory Management (IMS)</a>
-      <a href="#">CAMP Flight Scheduling (FS)</a>
-    </div>
-  </div>
-  <div>OEM Partnerships</div>
-  <div>Careers</div>
-  <div class="dropdown" id="resourcesDropdown">
-    <button onclick="toggleDropdown('resourcesDropdown')" class="dropbtn">Resources∨</button>
-    <div class="dropdown-content">
-      <a href="#">About Us</a>
-      <a href="#">News</a>
-    </div>
-  </div> 
-  <div class="dropdown" id="supportDropdown">
-    <button onclick="toggleDropdown('supportDropdown')" class="dropbtn">Support∨</button>
-    <div class="dropdown-content">
-      <a href="#">Need Help?</a>
-      <a href="#">Login FAQs</a>
-      <a href="#">SSO Login</a>
-    </div>
-
-  </div>
-  <div><span>LOGIN</span></div>
-      </div>
-    </header>
-    <nav class="div1">
+      <header>
+        <div>
+          <img
+            src="https://www.campsystems.com/hs-fs/hubfs/LOGOS/LOGOS/camp%20white%20logo.png?width=900&height=600&name=camp%20white%20logo.png"
+          />
+        </div>
+        <div class="text">
+          <div>Contact Us</div>
+          <div class="dropdown" id="eventsDropdown">
+            <button onclick="toggleDropdown('eventsDropdown')" class="dropbtn">
+              Events & Training∨
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Events</a>
+              <a href="#">Training</a>
+            </div>
+          </div>
+          <div class="dropdown" id="productsDropdown">
+            <button
+              onclick="toggleDropdown('productsDropdown')"
+              class="dropbtn"
+            >
+              Product & Services∨
+            </button>
+            <div class="dropdown-content">
+              <a href="#">CAMP Maintenance(MTX) Management</a>
+              <a href="#">CAMP Engine Health Monitoring (EHM)</a>
+              <a href="#">CAMP Inventory Management (IMS)</a>
+              <a href="#">CAMP Flight Scheduling (FS)</a>
+            </div>
+          </div>
+          <div>OEM Partnerships</div>
+          <div>Careers</div>
+          <div class="dropdown" id="resourcesDropdown">
+            <button
+              onclick="toggleDropdown('resourcesDropdown')"
+              class="dropbtn"
+            >
+              Resources∨
+            </button>
+            <div class="dropdown-content">
+              <a href="#">About Us</a>
+              <a href="#">News</a>
+            </div>
+          </div>
+          <div class="dropdown" id="supportDropdown">
+            <button onclick="toggleDropdown('supportDropdown')" class="dropbtn">
+              Support∨
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Need Help?</a>
+              <a href="#">Login FAQs</a>
+              <a href="#">SSO Login</a>
+            </div>
+          </div>
+          <div><span>LOGIN</span></div>
+        </div>
+      </header>
+      <nav class="div1">
         <b>Airworthy. Connected.<br />Available.</b>
         <p>
           Your trusted partner to efficiently manage your aircraft maintenance
@@ -64,7 +76,6 @@
         <span>CONTACT US</span>
       </nav>
     </div>
-
 
     <main>
       <section class="div2">
@@ -176,7 +187,7 @@
       </section>
       <section class="div5">
         <h3>Recommended by every major OEM</h3>
-        <button class="scroll-button scroll-left" onclick="scrollLeft()">
+        <button class="scroll-button scroll-left" onclick="scrollLeftt()">
           &#8249;
         </button>
         <div id="imagejust">
@@ -215,8 +226,6 @@
           &#8250;
         </button>
       </section>
-          <script src="CAMP.js"></script>
-          <script src="Dropdown.js"></script>
       <section class="div6">
         <h3>YOUR OPERATION. OUR SOLUTION.</h3>
         <h4>
@@ -257,86 +266,87 @@
         </div>
       </section>
       <div class="black">
-      <aside>
-        <div id="flex">
-          <span>
-            <p>SELECT FEATURES & TOOLS</p>
-            <ul>
-            <li><a href="">eWork Order and ezSign</a></li>
-            <li><a href="">Observations</a></li>
-            <li><a href="">Maintenance Program Manager</a></li>
-            <li><a href="">AD/SB Manager</a></li>
-            <li><a href="">Fleet Analytics</a></li>
-            <li><a href="">Aircraft Insights</a></li>
-            <li><a href="">iCAMP Mobile Application</a></li>
-            <li><a href="">CAMP ezVault</a></li>
-            <li><a href="">MTX Calendar</a></li>
-            <li><a href="">Document Manager</a></li>
-             </ul>
-          </span>
-          <span>
-            <p>AVIATION ERPs</p>
-            <ul>
-            <li><a href="">Continuum Applied Technology (CORRIDOR)</a></li>
-            <li><a href="">Component Control</a></li>
-            <li><a href="">Total FBO</a></li>
-            <li><a href="">FBO One</a></li>
-            </ul>
-          </span>
-          <span>
-            <p>MARKETPLACES</p>
-            <ul>
-            <li><a href="">ILS – Parts Marketplace</a></li>
-            <li><a href="">FlightBridge – Trip Service Marketplace</a></li>
-            <li><a href="">AMSTAT – Aircraft Listing Marketplace</a></li>
-            </ul>
-          </span>
-          <span>
-            <p>RESOURCES</p>
-            <ul>
-           <li><a href="">Need Help?</a></li>
-            <li><a href="">About Us</a></li>
-            <li><a href="">Careers</a></li>
-            <li><a href="">Security</a></li>
-            <li><a href="">Contact Us</a></li>
-            <li><a href="">CESCOM</a></li>
-            <li><a href="">AVTRAK</a></li>
-            <li><a href="">SSO Login</a></li>
-            </ul>
-          </span>
-        </div>
-      </aside>
-  <footer>
-    <div id="bline">
-    <div id="left">
-      <img src="https://www.campsystems.com/hubfs/CAMP%20Hearst.png" />
-      <bold> <br>Privacy Notice  DPF Statement</bold>
-      <p>© 2025 CAMP Systems International, Inc.</p>
-    </div>
-    <div id="right">
-      <a
-        href="https://facebook.com/yourprofile"
-        target="_blank"
-        title="Visit our Facebook page"
-      >
-        <img
-          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.KS5IodOhY-wgufHRsyqQuwHaHX%3Fcb%3D12%26pid%3DApi&f=1&ipt=fd3372f65859f9ab3ab8bb95dc35f16ee146336a436c77bd5e5e403d484222e6&ipo=images"
-        />
-      </a>
-      <a href="">
-        <img
-          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIF.KiXzHLFIyN%252bjQtHrS2RRYA%26cb%3D12%26pid%3DApi&f=1&ipt=1968003176c54b198c71e8e1126802af21c5b1450fcfcac4b601e42543a3bec5&ipo=images"
-        />
-      </a>
-      <a href="">
-        <img
-          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.N2C1kN5I69yMxO9D21JmjgHaHQ%3Fcb%3D12%26pid%3DApi&f=1&ipt=0f82c0c82fedb6ece087a5094793e67e5a0dcac699567b82d184cce1c3281afc&ipo=images"
-        />
-      </a>
-    </div>
-    </div>
-  </footer>
-       </div>
+        <aside>
+          <div id="flex">
+            <span>
+              <p>SELECT FEATURES & TOOLS</p>
+              <ul>
+                <li><a href="">eWork Order and ezSign</a></li>
+                <li><a href="">Observations</a></li>
+                <li><a href="">Maintenance Program Manager</a></li>
+                <li><a href="">AD/SB Manager</a></li>
+                <li><a href="">Fleet Analytics</a></li>
+                <li><a href="">Aircraft Insights</a></li>
+                <li><a href="">iCAMP Mobile Application</a></li>
+                <li><a href="">CAMP ezVault</a></li>
+                <li><a href="">MTX Calendar</a></li>
+                <li><a href="">Document Manager</a></li>
+              </ul>
+            </span>
+            <span>
+              <p>AVIATION ERPs</p>
+              <ul>
+                <li><a href="">Continuum Applied Technology (CORRIDOR)</a></li>
+                <li><a href="">Component Control</a></li>
+                <li><a href="">Total FBO</a></li>
+                <li><a href="">FBO One</a></li>
+              </ul>
+            </span>
+            <span>
+              <p>MARKETPLACES</p>
+              <ul>
+                <li><a href="">ILS – Parts Marketplace</a></li>
+                <li><a href="">FlightBridge – Trip Service Marketplace</a></li>
+                <li><a href="">AMSTAT – Aircraft Listing Marketplace</a></li>
+              </ul>
+            </span>
+            <span>
+              <p>RESOURCES</p>
+              <ul>
+                <li><a href="">Need Help?</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Security</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">CESCOM</a></li>
+                <li><a href="">AVTRAK</a></li>
+                <li><a href="">SSO Login</a></li>
+              </ul>
+            </span>
+          </div>
+        </aside>
+        <footer>
+          <div id="bline">
+            <div id="left">
+              <img src="https://www.campsystems.com/hubfs/CAMP%20Hearst.png" />
+              <bold> <br />Privacy Notice DPF Statement</bold>
+              <p>© 2025 CAMP Systems International, Inc.</p>
+            </div>
+            <div id="right">
+              <a
+                href="https://facebook.com/yourprofile"
+                target="_blank"
+                title="Visit our Facebook page"
+              >
+                <img
+                  src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.KS5IodOhY-wgufHRsyqQuwHaHX%3Fcb%3D12%26pid%3DApi&f=1&ipt=fd3372f65859f9ab3ab8bb95dc35f16ee146336a436c77bd5e5e403d484222e6&ipo=images"
+                />
+              </a>
+              <a href="">
+                <img
+                  src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIF.KiXzHLFIyN%252bjQtHrS2RRYA%26cb%3D12%26pid%3DApi&f=1&ipt=1968003176c54b198c71e8e1126802af21c5b1450fcfcac4b601e42543a3bec5&ipo=images"
+                />
+              </a>
+              <a href="">
+                <img
+                  src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.N2C1kN5I69yMxO9D21JmjgHaHQ%3Fcb%3D12%26pid%3DApi&f=1&ipt=0f82c0c82fedb6ece087a5094793e67e5a0dcac699567b82d184cce1c3281afc&ipo=images"
+                />
+              </a>
+            </div>
+          </div>
+        </footer>
+      </div>
     </main>
+    <script src="CAMP.js"></script>
   </body>
 </html>

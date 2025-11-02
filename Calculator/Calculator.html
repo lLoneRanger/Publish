@@ -2,16 +2,21 @@
   <head>
     <link rel="stylesheet" href="index.css" />
   </head>
-  <header></header>
+
   <body>
-    <div id="screen"> 0</div>
+    <div id="screen"> 
+      <div id="input"></div>
+      <div id="answer"></div>
+      <div id="peek"></div>
+    </div>
     <div id="other-commands">
       <div id="special">
-        <button id="percent" onclick="percent()">%</button>
-        <button id="pos-neg" onclick="posNeg()">+/-</button>
-        <button id="sqrt" onclick="sqrt()">√</button>
-        <button id="square" onclick="square()">x²</button>
-        <button id="backspace" onclick="backspace()">←</button>
+        <button id="percent">%</button>
+        <button id="pos-neg">+/-</button>
+        <button id="sqrt">√</button>
+        <button id="square">x²</button>
+        <button id="square">xVy</button>
+        <button id="backspace">←</button>
       </div>
       <div id="conversion">
       <button id="convert" onclick="ltr-lbs()">ltr-lbs</button>
@@ -20,34 +25,38 @@
       <button id="convert" onclick="miles-km()">mls-km</button>
       <button id="convert" onclick="cm-inch()">cm-in</button>
     <button id="convert" onclick="inch-cm()">in-cm</button>
+    <div id="some-button">
+      <button id="open-brac">(</button>
+      <button id="close-brac">)</button>
     </div>
     </div>
     
     <div id="down">
     <div id="numbers">
-      <button id="1" onclick="1()">1</button>
-      <button id="1" onclick="2()">2</button>
-      <button id="1" onclick="3()">3</button>
-      <button id="1" onclick="4()">4</button>
-      <button id="1" onclick="5()">5</button>
-      <button id="1" onclick="6()">6</button>
-      <button id="1" onclick="7()">7</button>
-      <button id="1" onclick="8()">8</button>
-      <button id="1" onclick="9()">9</button>
-      <button id="1" onclick="0()">0</button>
-      <button id="1" onclick="dec()">.</button>
+      <button class="num" data-value="1">1</button>
+      <button class="num" data-value="2">2</button>
+      <button class="num" data-value="3">3</button>
+      <button class="num" data-value="4">4</button>
+      <button class="num" data-value="5">5</button>
+      <button class="num" data-value="6">6</button>
+      <button class="num" data-value="7">7</button>
+      <button class="num" data-value="8">8</button>
+      <button class="num" data-value="9">9</button>
+      <button class="num" data-value="0">0</button>
+      <button class="num" data-value=".">.</button>
     </div>
     <div id="general-c">
-      <button id="add" onclick="add()">+</button><br>
-      <button id="sub" onclick="sub()">-</button><br>
-      <button id="div" onclick="div()">/</button><br>
-      <button id="mult" onclick="mult()">*</button><br>
+      <button id="add">+</button><br>
+      <button id="sub">-</button><br>
+      <button id="div">/</button><br>
+      <button id="mult">*</button><br>
     </div>
     <div id="equal">
-        <button id="clear" onclick="clearScreen()">C</button> 
-        <button id="eq" onclick="eq()">=</button><br>
+        <button id="clear">C</button>
+        <button id="answers">ANS</button><br> 
+        <button id="eq">=</button><br>
     </div>
     </div>
-    <script href="calculator.js"></script>
+    <script src="calculator.js"></script>
   </body>
 </html>

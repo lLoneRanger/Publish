@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <style>
+            /* Overall form container */
+form {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Fieldset styling */
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Legend styling */
+legend {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Label styling */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+/* Input focus style */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
+/* Buttons */
+button[type="submit"],
+button[type="reset"] {
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+button[type="reset"] {
+  background-color: #6c757d;
+  color: white;
+}
+
+button[type="reset"]:hover {
+  background-color: #495057;
+}
+
+/* Responsive adjustments */
+@media (max-width: 450px) {
+  form {
+    margin: 20px;
+    padding: 15px;
+  }
+  
+  button[type="submit"],
+  button[type="reset"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+    </style>
+    </head>
+
+    <body>
+         <!-- <form action="/submit-form" method="POST" novalidate>
+        Use novalidate to disable browser default validation if you plan to do custom validation with JavaScript.
+        <label for="username">Username</label>
+        Each input should have an associated <label> for accessibility and better UX
+        The label’s for attribute matches the input’s id
+        Use appropriate type attributes: email, tel, url, number, password, date, etc
+        <input type="text" id="username" name="username" required>
+        <input type="email" name="email" required placeholder="Your email">
+        <input type="password" name="password" minlength="8" required>
+        For forms that have multiple sections (e.g., personal info, address), group related fields inside <fieldset>
+        <fieldset>
+        <legend>Personal Information</legend>
+         inputs here 
+        the type says how the button works
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        </fieldset>
+        </form> -->
+        <form action="/submit" method="POST" novalidate>
+        <fieldset>
+            <legend>User Information</legend>
+            
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="John Doe">
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="john@example.com">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required minlength="8">
+        </fieldset>
+
+        <button type="submit">Register</button>
+        <button type="reset">Clear</button>
+        </form>
+    </body>
+</html>
