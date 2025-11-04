@@ -1,0 +1,163 @@
+<html>
+  <head>
+    <style>
+      body {
+        width: 100%;
+        height: 100%;
+        border-style: solid;
+      }
+
+      nav {
+        width: 20% !important;
+        height: 100%;
+        border: 1px solid #b1afaf;
+        box-shadow: 2px 2px 2px;
+        text-align: left;
+        justify-items: left;
+        align-items: start;
+      }
+
+      img {
+        height: auto;
+        width: 20%;
+        cursor: pointer;
+        margin-bottom: -10px;
+      }
+
+      #logo-here {
+        background-color: blue;
+        display: inline-block;
+        margin-right: auto;
+      }
+
+      #sidebar, #dropdown {
+        display: none;
+        text-align:left;
+        border-style: solid;
+        margin-top:5px;
+        width:100%;
+        box-sizing: border-box;
+      }
+
+      .about-us {
+        border-style: none;
+        background-color: white;
+        cursor:pointer;
+      }
+
+    ul{
+        text-align: left;
+        list-style:none;
+        justify-content: left;
+        justify-items: left;
+        border-style:solid;
+        padding-left:15px;
+        padding-top:10px;
+      }
+
+    a{
+        text-decoration:none;
+    }
+
+    li{
+        margin-bottom:10px;
+    }
+
+    li:last-child{
+        margin-bottom:auto;
+    }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="top-layer">
+        <span class="menu-button">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/10486/10486773.png"
+          />
+        </span>
+        <span id="logo-here"> LOGO HERE </span>
+      </div>
+      <div id="sidebar">
+        <!-- <li id="go-left" onclick="hideSidebar()">
+          <a href="#"
+            ><img
+              src="https://cdn-icons-png.flaticon.com/128/458/458595.png"
+              height="25%"
+          /></a>
+        </li> -->
+        <ul>
+          <li><a href="#">Features</a></li>
+          <li>
+            <span id="line">
+              <a href="google.com">About Us </a>
+              <button class="about-us">v</button>
+            </span>
+            <ul id="about-us">
+              <li><a href="#">More Free Template</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Our Link</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <script>
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.querySelector('.menu-button');
+    const dropdown = document.getElementById('about-us');
+    const dropBtn = document.querySelector('.about-us');
+
+    // Toggle sidebar visibility when clicking the toggle button
+    toggleBtn.addEventListener('click', function(event) {
+    if (sidebar.style.display === 'block') {
+        sidebar.style.display = 'none';
+    } else {
+        sidebar.style.display = 'block';
+        dropdown.style.display = 'none';//hides the About us dropdown
+    }
+    event.stopPropagation();
+    });
+
+    // Prevent sidebar clicks from closing it
+    sidebar.addEventListener('click', function(event) {
+    event.stopPropagation();
+    });
+
+    // Hide sidebar on outside click
+    document.addEventListener('click', function(event) {
+    if (!sidebar.contains(event.target)) {
+        sidebar.style.display = 'none';
+    }
+    });
+
+    // Toggle About-us visibility when clicking the toggle button
+    dropBtn.addEventListener('click', function(event) {
+    if (dropdown.style.display === 'block') {
+        dropdown.style.display = 'none';
+    } else {
+        dropdown.style.display = 'block';
+    }
+    event.stopPropagation();
+    });
+
+    // Prevent About-us clicks from closing it
+    dropdown.addEventListener('click', function(event) {
+    event.stopPropagation();
+    });
+
+    // Hide dropdown on outside click
+    sidebar.addEventListener('click', function(event) {
+    if (!dropdown.contains(event.target)) {
+        dropdown.style.display = 'none';
+    }
+    });
+
+    </script>
+  </body>
+</html>
